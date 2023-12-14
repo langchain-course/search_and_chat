@@ -11,6 +11,7 @@ import streamlit as st
 # 创建 浏览器 tab title
 st.set_page_config(page_title='基于 Streamlit 的聊天机器人')
 
+# ================== 左边栏配置部分 =======================
 openai_api_base = st.sidebar.text_input(
     'OpenAI API Base', value='https://api.openai.com/v1'
 )
@@ -26,6 +27,8 @@ temperature = st.sidebar.slider(
     'Temperature', 0.0, 2.0, value=0.6, step=0.1
 )
 
+# ================== 中间聊天部分 =======================
+# 实例化用于存储聊天记录的 History 对象
 message_history = StreamlitChatMessageHistory()
 # 当没有聊天内容时，做一些初始化的操作
 if (len(message_history.messages) == 0 or
