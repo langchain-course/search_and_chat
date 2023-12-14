@@ -31,7 +31,7 @@ temperature = st.sidebar.slider(
 # 实例化用于存储聊天记录的 History 对象
 message_history = StreamlitChatMessageHistory()
 # 当没有聊天内容或点击“清空聊天记录”按钮时，做一些初始化的操作
-if not message_history.messages or st.sidebar.button('清空历史聊天记录'):
+if not message_history.messages or st.sidebar.button('清空历史记录'):
     message_history.clear()
     message_history.add_ai_message('有什么可以帮你的吗？')
 
