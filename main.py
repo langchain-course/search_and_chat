@@ -1,9 +1,9 @@
-from langchain.chat_models import ChatOpenAI
-from langchain.tools import DuckDuckGoSearchRun
-from langchain.callbacks import StreamlitCallbackHandler
+from langchain_openai import ChatOpenAI
+from langchain_community.tools import DuckDuckGoSearchRun
+from langchain_community.callbacks import StreamlitCallbackHandler
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.agents import ConversationalChatAgent, AgentExecutor
-from langchain.memory.chat_message_histories import (
+from langchain_community.chat_message_histories import (
     StreamlitChatMessageHistory)
 
 import streamlit as st
